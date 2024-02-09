@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* Assignment 1 | COMP1073 Client-Side JavaScript */
+
+
+/* html, body{
+    height: 100%;
+} */
+
+html{
+    background-image: linear-gradient(rgba(255, 175, 252, 0.52) 0%, rgba(49, 58, 141, 0.5) 100%), url(../images/background.png);
+    background-size: cover;
+}
+
+body{
+
+    padding: 5rem;
+
+}
+
+div h1{
+    font-family: 'Concert One';
+    text-align: center;
+    font-size: 4rem;
+    color: aqua;
+}
+
+.slots{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+.column{
+    display: inline-block;
+    width: 90px;
+    height: 120px;
+    border: solid 10px #fee6e3;
+    /* margin: 1.2rem; */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#col1{
+    margin: 1rem;
+	padding: 0;
+	/* transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1); */
+    background-image: url(../images/one.png);
+    background-size: cover;
+	position: relative;
+    background-repeat: repeat-y;
+    transition: background-position-y 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+
+#col2{
+    margin: 1rem;
+	padding: 0;
+	/* transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1); */
+    background-image: url(../images/two.png);
+    background-size: cover;
+	position: relative;
+    background-repeat: repeat-y;
+    transition: background-position-y 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#col3{
+    margin: 1rem;
+	padding: 0;
+	/* transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1); */
+    background-image: url(../images/three.png);
+    background-size: cover;
+	position: relative;
+    background-repeat: repeat-y;
+    transition: background-position-y 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#col4{
+    margin: 1rem;
+	padding: 0;
+	/* transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1); */
+    background-image: url(../images/four.png);
+    background-size: cover;
+	position: relative;
+    background-repeat: repeat-y;
+    transition: background-position-y 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#col5{
+    margin: 1rem;
+	padding: 0;
+	/* transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1); */
+    background-image: url(../images/five.png);
+    background-size: cover;
+	position: relative;
+    background-repeat: repeat-y;
+    transition: background-position-y 1000ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#firstLine, #secondLine, #thirdLine, .slots{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#firstLine button{
+    margin: 0.6rem;
+}
+
+div p {
+    text-align: center;
+}
+
+#button0, #button1, #button2, #button3, #button4 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Concert One';
+  font-size: 14px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#para0, #para1, #para2, #para3, #para4, #speakButton, #randomSpeakButton, #resetStory, #randomPara {
+    align-items: center;
+    background-color: #d1e6f6;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    display: flex;
+    font-family: 'Concert One';
+    font-size: 14px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+#speakButton{
+    cursor: pointer;
+    background-color: #36627d;
+}
+
+#button0:after, #button1:after, #button2:after, #button3:after, #button4:after, #para0:after, #para1:after, #para2:after, #para3:after, #para4:after, #speakButton:after, #randomSpeakButton:after, #resetStory:after, #randomPara:after{
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+#button0:hover:after, #button1:hover:after, #button2:hover:after, #button3:hover:after, #button4:hover:after {
+  transform: translate(0, 0);
+}
+
+#button0:active, #button1:active, #button2:active, #button3:active, #button4:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+#button0:hover, #button1:hover, #button2:hover, #button3:hover, #button4:hover {
+  outline: 0;
+}
+
+.col{
+    text-align: center;
+    display: grid;
+    justify-items: center;
+}
+
+#thirdLine{
+    justify-content: center;
+}
+
+#thirdLine button{
+    margin: 1rem;
+}
+
+#randomSpeakButton{
+    background-color: #ffb6df;
+}
+
+#randomSpeakButton:hover, #resetStory:hover{
+    font-size: 16px;
+}
+
+#resetStory{
+    background-color: #7f90ff;
+}
+
+#randomPara{
+    width: 50%;
+}
+
+.last{
+    display: flex;
+    justify-content: center;
+}
